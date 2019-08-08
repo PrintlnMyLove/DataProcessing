@@ -37,7 +37,7 @@ if __name__ == '__main__':
         # # 获取游标
         cursor1 = connection1.cursor()
         print('开始迁移')
-        res, column = read('TableName', num, num + 50000, cursor1)
+        res, column = read('TableName', num, 50000, cursor1)
         if not res:			# 设置中断环节
             break
         connection2 = pymysql.connect(host='',
